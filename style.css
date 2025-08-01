@@ -1,84 +1,124 @@
-/* General Styles */
+/* 🌟 General Styles */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
   color: #333;
+  background-color: #f7f9fc;
+  animation: fadeIn 1s ease-in-out;
+  scroll-behavior: smooth;
 }
 
-/* Hero Section */
+/* 🌟 Hero Section */
 .hero {
   background: linear-gradient(to right, #4facfe, #00f2fe);
   color: white;
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
 }
-.hero h1 { font-size: 2.5em; }
-.hero p { font-size: 1.2em; }
+.hero h1 { 
+  font-size: 2.8em; 
+  animation: slideInDown 1s ease forwards;
+}
+.hero p { 
+  font-size: 1.3em; 
+  opacity: 0.9;
+}
+
+/* 🌟 CTA Buttons */
 .btn {
   display: inline-block;
   background: #ffb400;
   color: white;
-  padding: 12px 24px;
+  padding: 14px 28px;
   margin-top: 20px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.1em;
+  transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  position: relative;
+  overflow: hidden;
 }
-.btn:hover { background: #e69a00; }
+.btn:hover { 
+  background: linear-gradient(to right, #ffb400, #ff8000);
+  transform: scale(1.08);
+}
 
-/* Sections */
+/* 🌟 Section Layout */
 section {
-  padding: 50px 20px;
+  padding: 60px 20px;
   text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
 }
+
+/* 🌟 Background Colors */
+.benefits { background-color: #ffffff; }
+.how { background-color: #f0f8ff; }
+.testimonials { background-color: #fff7e6; }
+.pricing { background-color: #e8f9e9; }
+.faq { background-color: #f7f7f7; }
+
+/* 🌟 Show Class */
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🌟 Benefit Cards */
 .benefit-cards {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 .card {
   background: #f9f9f9;
   padding: 20px;
-  border-radius: 10px;
-  width: 200px;
-  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  width: 220px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
 }
 
-/* Testimonials */
-blockquote {
-  font-style: italic;
-  margin: 20px auto;
-  width: 60%;
-  background: #f1f1f1;
-  padding: 15px;
-  border-radius: 8px;
-}
-
-/* FAQ */
-details summary {
-  cursor: pointer;
-  font-weight: bold;
-}
-details p {
-  margin: 10px 0;
-}
-
-/* Footer */
+/* 🌟 Footer */
 footer {
   background: #222;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 25px;
+  font-size: 0.9em;
 }
 footer a { color: #ffb400; }
+
+/* 🌟 Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* 🌟 Mobile Responsive */
 @media (max-width: 768px) {
   .benefit-cards {
     flex-direction: column;
     align-items: center;
   }
-  .card { width: 80%; }
-  blockquote { width: 90%; }
+  .card { width: 85%; }
 }
