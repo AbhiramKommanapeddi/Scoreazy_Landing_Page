@@ -1,0 +1,84 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+.hero h1 { font-size: 2.5em; }
+.hero p { font-size: 1.2em; }
+.btn {
+  display: inline-block;
+  background: #ffb400;
+  color: white;
+  padding: 12px 24px;
+  margin-top: 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn:hover { background: #e69a00; }
+
+/* Sections */
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+.benefit-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Testimonials */
+blockquote {
+  font-style: italic;
+  margin: 20px auto;
+  width: 60%;
+  background: #f1f1f1;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* FAQ */
+details summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+details p {
+  margin: 10px 0;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+footer a { color: #ffb400; }
+@media (max-width: 768px) {
+  .benefit-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card { width: 80%; }
+  blockquote { width: 90%; }
+}
